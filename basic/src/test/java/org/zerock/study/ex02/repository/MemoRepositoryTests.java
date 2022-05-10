@@ -103,6 +103,11 @@ class MemoRepositoryTests {
         System.out.println("Page Size: " + result.getSize());   //페이지당 데이터 개수
         System.out.println("has next page?: " + result.hasNext());  //다음 페이지 존재 여부
         System.out.println("first page?: " + result.isFirst()); //시작 페이지(0) 여부
+
+        System.out.println("==================================");
+        for (Memo memo : result.getContent()) {
+            System.out.println(memo);
+        }
     }
 
     @Test
