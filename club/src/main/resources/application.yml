@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/bootex
+    username: root
+    password: sskim
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  #thymeleaf
+  thymeleaf:
+    cache: false
+  profiles:
+    include: oauth
+
+logging:
+  level:
+    org.springframework.security.web: trace
+    org.zerock: debug
